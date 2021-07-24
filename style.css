@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar{
+    height: 10%;
+    background-color: #333333;
+    display: flex;
+}
+
+.grid{
+    background-color: #f2f2f2;
+    min-height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+}
+
+.filter-container,.action-container{
+    height: 72%;
+    border-radius: 4px;
+    margin-left: 8rem;
+    margin-top: 1.5vh;
+    background-color: #444444;
+}
+
+.filter-container{
+    width: 12rem;
+    display: flex;
+}
+
+.action-container{
+    width: 6rem;
+    display: flex;
+}
+
+.filter{
+    height: 100%;
+    width: 25%;
+}
+
+.filter:hover{
+    background-color: #393939;
+}
+
+.filter div{
+    height: 35%;
+    width: 45%;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+.pink-color-btn,.pink{
+    background-color: #d595aa;
+}
+
+.blue-color-btn,.blue{
+    background-color: #5ecdde;
+}
+
+.green-color-btn,.green{
+    background-color: #91e6c7;
+}
+
+.black-color-btn,.black{
+    background-color: black;
+}
+
+.add,.delete{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    color: white;
+}
+
+.add{
+    font-size: 1.8rem;
+    padding-top: 0.6rem;
+}
+
+.delete{
+    font-size: 1.7rem;
+    padding-top: 0.5rem;
+}
+.add:hover,.delete:hover{
+    background-color: #393939;
+}
+
+.delete-state, .selected-filter{
+    background-color: #393939 !important;
+}
+
+.modal-container{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    height: 18rem;
+    width: 35rem;
+    display: flex;
+    position: fixed;
+    top: calc((100vh - 18rem) / 2);
+    left: calc((100vw - 35rem) / 2);
+}
+
+.writing-area{
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    outline: none;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+}
+
+.filter-area{
+    border: 1px soild red;
+    background-color: #444;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-filter{
+    border: 1px soild red;
+    height: 2.5rem;
+    width: 50%;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+  
+.modal-filter:hover {
+    opacity: 1;
+}
+
+.ticket{
+    background-color: white;
+    height: 8rem;
+    width: 16rem;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 2px #393939;
+}
+
+.ticket-color{
+    height: 6%;
+    width: 100%;
+}
+
+.ticket-id{
+    height: 20%;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #989393;
+}
+
+.ticket-box{
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    height: 74%;
+    width: 100%;
+    overflow: auto;
+    outline: none;
+}
+
+.active-modal-filter{
+    border: solid 5px;
+    opacity: 1;
+}
+
+@media (max-width:600px){
+    .filter-container, .action-container {
+        height: 64%;
+        border-radius: 4px;
+        margin-left: 3rem;
+        margin-top: 1.8vh;
+        background-color: #444444;
+    }
+
+    .filter-container {
+        width: 9rem;
+        display: flex;
+    }
+
+    .add{
+        padding-top: 0.4rem;
+    }
+
+    .delete{
+        padding-top: 0.3rem;
+    }
+
+    .modal-container {
+        height: 12rem;
+        width: 20rem;
+        top: calc((100vh - 12rem) / 2);
+        left: calc((100vw - 20rem) / 2);
+    }
+}
